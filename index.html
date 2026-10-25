@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171322">
+    <title>Isaac Mod Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar" id="sidebar">
+            <h2>🎮 Isaac Mod Maker</h2>
+            <p class="project-name" id="projectName">Новый мод</p>
+
+            <nav>
+                <button data-page="dashboard">🏠 Главная</button>
+                <button data-page="items">✨ Предметы</button>
+                <button data-page="characters">👤 Персонажи</button>
+                <button data-page="enemies">👾 Враги</button>
+                <button data-page="rooms">🧱 Комнаты</button>
+                <button data-page="textures">🖼️ Текстуры</button>
+                <button data-page="lua">💻 Lua-редактор</button>
+                <button data-page="assistant">🤖 Помощник</button>
+                <button data-page="build">📦 Сборка</button>
+                <button data-page="settings">⚙️ Настройки</button>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <button id="menuToggle" aria-label="Открыть меню">☰</button>
+                <h1 id="pageTitle">Главная</h1>
+                <button id="saveProject">💾 Сохранить</button>
+            </header>
+
+            <section id="pageContent" class="content">
+                <div class="welcome">
+                    <h2>Добро пожаловать!</h2>
+                    <p>Создавай собственные модификации для The Binding of Isaac.</p>
+                </div>
+
+                <div class="stats">
+                    <article class="card">
+                        <span>✨ Предметы</span>
+                        <strong id="itemCount">0</strong>
+                    </article>
+                    <article class="card">
+                        <span>👤 Персонажи</span>
+                        <strong id="characterCount">0</strong>
+                    </article>
+                    <article class="card">
+                        <span>👾 Враги</span>
+                        <strong id="enemyCount">0</strong>
+                    </article>
+                    <article class="card">
+                        <span>🧱 Комнаты</span>
+                        <strong id="roomCount">0</strong>
+                    </article>
+                </div>
+
+                <div class="panel">
+                    <h2>Быстрое создание</h2>
+                    <div class="quick-actions">
+                        <button data-create="item">+ Предмет</button>
+                        <button data-create="character">+ Персонаж</button>
+                        <button data-create="enemy">+ Враг</button>
+                        <button data-create="room">+ Комната</button>
+                    </div>
+                </div>
+
+                <div id="editorContainer" class="panel">
+                    <h2>Рабочая область</h2>
+                    <p>Выбери раздел в меню, чтобы начать работу.</p>
+                </div>
+            </section>
+
+            <footer>
+                Isaac Mod Maker • Версия 0.1.0
+            </footer>
+        </main>
+    </div>
+
+    <div id="toast" role="status"></div>
+
+    <script src="storage.js"></script>
+    <script src="editors.js"></script>
+    <script src="rooms.js"></script>
+    <script src="assistant.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
